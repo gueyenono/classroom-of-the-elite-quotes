@@ -10,6 +10,7 @@ lapply(X = r_paths, FUN = source) |> invisible()
 
 
 list(
+  # Scrape quotes ----
   targets::tar_target(
     quotes_data,
     scrape_quotes(
@@ -17,6 +18,7 @@ list(
     )
   ),
 
+  # Create report ----
   tarchetypes::tar_quarto(
     report,
     path = here::here("reporting/report.qmd"),
