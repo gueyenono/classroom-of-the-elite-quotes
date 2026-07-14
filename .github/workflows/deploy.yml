@@ -1,0 +1,33 @@
+name: deploy-netlify
+
+on:
+  workflow_run:
+    workflows: ["run-pipeline"]
+    types:
+      - completed
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    if: ${{ github.event.workflow_run.conclusion == 'success' }}
+    steps:
+
+      - name: Checkout the targets-runs branch (contains rendered outputs)
+        uses: actions/checkout@v4
+        with:
+          ref: targets-runs
+
+      - name: Prepare publish directory
+        run: |
+          mkdir -p _site
+          cp reporting/report.html _site/index.html
+
+      - name: Deploy to Netlify
+        uses: nwtgck/actions-netlify@v3
+        with:
+          publish-dir: "_site"
+          production-deploy: true
+          deploy-message: "Deploy after pipeline run ${{ github.event.workflow_run.head_sha }}"
+        env:
+          NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
+          NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID }}
