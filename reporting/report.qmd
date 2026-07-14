@@ -1,0 +1,19 @@
+---
+title: Classroom of the Elites
+format: html
+---
+
+```{r}
+targets::tar_load(quotes_data)
+
+i <- sample(x = nrow(quotes_data), size = 1)
+d <- quotes_data[i, ]
+```
+
+**Season:** `r d$season`
+
+**Episode:** `r d$episode`
+
+**Quote:** `r d$quote`
+
+**Author:** `r d$author` 

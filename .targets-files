@@ -1,0 +1,7 @@
+.targets-files
+_targets/meta/process
+_targets/meta/progress
+_targets/objects/quotes_data
+_targets/meta/meta
+reporting/report.html
+reporting/report_files/libs/bootstrap/bootstrap.min.css
