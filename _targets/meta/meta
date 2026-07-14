@@ -1,9 +1,9 @@
 name|type|data|command|depend|seed|path|time|size|bytes|format|repository|iteration|parent|children|seconds|warnings|error
-.Random.seed|object|7d90e13f960ead96|||||||||||||||
+.Random.seed|object|2182f1cc30613f4a|||||||||||||||
 install.packages|function|e3b0a9d56d54eeba|||||||||||||||
-quotes_data|stem|41ba975c1abbb41f|859bf200fd8fe347|d943a7c48ced62e3|626749696||t20648.9583355742s|d7731f103501508d|2021|rds|local|vector|||24.46||
+quotes_data|stem|41ba975c1abbb41f|859bf200fd8fe347|d943a7c48ced62e3|626749696||t20648.961362656s|d7731f103501508d|2021|rds|local|vector|||24.46||
 r_paths|object|e675c3fa589ea578|||||||||||||||
 remove.packages|function|e5e5ba52f888863b|||||||||||||||
-report|stem|b64e8de55a045b28|30853468c26f9c00|92ef4423921b799d|787668912|reporting/report.html*reporting/report.qmd|t20648.9583696366s|b47834b12a449248|19447|file|local|vector|||2.941||
+report|stem|0d348a657ea904f4|30853468c26f9c00|92ef4423921b799d|787668912|reporting/report.html*reporting/report.qmd|t20648.9617664288s|794d425eb2119be9|1115689|file|local|vector|||2.826||
 scrape_quotes|function|ca7c8c829237ca9d|||||||||||||||
 update.packages|function|30d2377eab38636a|||||||||||||||
