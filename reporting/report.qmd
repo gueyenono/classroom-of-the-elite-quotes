@@ -18,3 +18,5 @@ d <- quotes_data[i, ]
 **Quote:** `r d$quote`
 
 **Author:** `r d$author` 
+
+Report created on: **`r Sys.time()`**
